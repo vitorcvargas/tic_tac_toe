@@ -16,7 +16,7 @@ class GameTable:
             return False
 
     def __str__(self):
-        return '{}|{}|{}\n-----\n{}|{}|{}\n------\n{}|{}|{}'.format(
+        return ' {} | {} | {} \n---------\n {} | {} | {} \n---------\n {} | {} | {} '.format(
         self.blocks['7'], self.blocks['9'], 
         self.blocks['8'], self.blocks['4'],
         self.blocks['5'], self.blocks['6'], 
