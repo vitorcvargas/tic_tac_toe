@@ -3,9 +3,6 @@ from modules import GameTable
 reference_table = "7 | 8 | 9\n---------\n4 | 5 | 6\n----------\n1 | 2 | 3"
 table = GameTable()
 
-
-
-
 def game_on():
 
     player1_mark = input('Player one, pick "X" or "O" for your mark:\n')
@@ -48,10 +45,10 @@ def game_on():
                 break
             break
         
-        if game_on == False:
-            player2_turn = False
-        else:
+        if game_on == True:
             player2_turn = True
+        else:
+            player2_turn = False
         while player2_turn:
             print("It's your turn, player 2")
 
