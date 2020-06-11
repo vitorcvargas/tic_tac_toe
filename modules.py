@@ -17,13 +17,13 @@ class GameTable:
 
     def __str__(self):
         return ' {} | {} | {} \n---------\n {} | {} | {} \n---------\n {} | {} | {} '.format(
-        self.blocks['7'], self.blocks['9'], 
-        self.blocks['8'], self.blocks['4'],
+        self.blocks['7'], self.blocks['8'], 
+        self.blocks['9'], self.blocks['4'],
         self.blocks['5'], self.blocks['6'], 
         self.blocks['1'],self.blocks['2'], 
         self.blocks['3']
         )
-
+    
     def result(self, count):
     
         if count >= 5:
