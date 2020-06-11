@@ -23,26 +23,26 @@ class GameTable:
         self.blocks['1'],self.blocks['2'], 
         self.blocks['3']
         )
-    
+
     def result(self, count):
     
         if count >= 5:
-            if self.blocks['7'] == self.blocks['8'] == self.blocks['9']:
+            if (self.blocks['7'] != "") and (self.blocks['7'] == self.blocks['8'] == self.blocks['9']):
                 return True
-            elif self.blocks['4'] == self.blocks['5'] == self.blocks['6']:
+            elif (self.blocks['4'] != "") and (self.blocks['4'] == self.blocks['5'] == self.blocks['6']):
                 return True
-            elif self.blocks['1'] == self.blocks['2'] == self.blocks['3']:
+            elif (self.blocks['1'] != "") and (self.blocks['1'] == self.blocks['2'] == self.blocks['3']):
                 return True
-            elif self.blocks['1'] == self.blocks['4'] == self.blocks['7']:
+            elif (self.blocks['1'] != "") and (self.blocks['1'] == self.blocks['4'] == self.blocks['7']):
                 return True
-            elif self.blocks['2'] == self.blocks['5'] == self.blocks['8']:
+            elif (self.blocks['2'] != "") and (self.blocks['2'] == self.blocks['5'] == self.blocks['8']):
                 return True
-            elif self.blocks['3'] == self.blocks['6'] == self.blocks['9']:
+            elif (self.blocks['3'] != "") and (self.blocks['3'] == self.blocks['6'] == self.blocks['9']):
                 return True
-            elif self.blocks['3'] == self.blocks['5'] == self.blocks['7']:
+            elif (self.blocks['3'] != "") and (self.blocks['3'] == self.blocks['5'] == self.blocks['7']):
                 return True
-            elif self.blocks['1'] == self.blocks['5'] == self.blocks['9']:
+            elif (self.blocks['1'] != "") and (self.blocks['1'] == self.blocks['5'] == self.blocks['9']):
                 return True
-            elif count == 10:
+            elif count == 9:
                 return False
 
