@@ -1,5 +1,6 @@
 from modules import GameTable
 
+reference_table = "7 | 8 | 9\n---------\n4 | 5 | 6\n----------\n1 | 2 | 3"
 table = GameTable()
 
 
@@ -20,19 +21,18 @@ def game_on():
 
         player1_turn = True
         while player1_turn:
-
             print("It's your turn, player 1")
-            print(table)
-            print()
-            print()
 
             while True:
+                print(reference_table)
                 player1_choice = input('Choose your next move: ')
+                
                 if table.add(player1_choice, player1_mark) == False:
                     print("Try again with an available block")
                 else:
                     table.add(player1_choice, player1_mark)
                     counter += 1
+                    print(table)
                     break
 
             if table.result(counter) == True:
@@ -54,15 +54,16 @@ def game_on():
             player2_turn = True
         while player2_turn:
             print("It's your turn, player 2")
-            print(table)
 
             while True:
+                print(reference_table)
                 player2_choice = input('Choose your next move: ')
                 if table.add(player2_choice, player2_mark) == False:
                     print("Try again with an available block")
                 else:
                     table.add(player2_choice, player2_mark)
                     counter += 1
+                    print(table)
                     break
                         
             if table.result(counter) == True:
